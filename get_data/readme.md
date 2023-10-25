@@ -21,7 +21,12 @@ Before running this code, ensure that you have the following prerequisites:
 3. Run the script using the following command:
 
    ```shell
-   python web_scraping.py
+
+   git clone https://github.com/parvvaresh/Iranian-news-dataset/tree/main/get_data
+   pip install BeautifulSoup
+   pip install requests
+   pip install pandas
+   python3 fars_news.py
    ```
 
 4. The script will prompt you to enter the start and finish page numbers for data collection. These page numbers correspond to the page numbers on the Fars News website for the specified categories.
@@ -51,15 +56,15 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 [Alireza Parvaresh](https://www.linkedin.com/in/parvvaresh/)
 
 ## special thanks to : 
-[Elham Ghassemi](https://www.linkedin.com/in/parvvaresh/)
-[Golshid Ranjbaran](https://www.linkedin.com/in/parvvaresh/)
-[Faeezeh Gholamrezaee]()
+[Elham Ghassemi](https://www.linkedin.com/in/elham-ghasemi-5a258058/)
+
+[Golshid Ranjbaran](https://www.linkedin.com/in/golshid-ranjbaran-544a2115a/)
+
+[Faeezeh Gholamrezaee](https://github.com/faezeh-gholamrezaie)
 
 
 ## Contact
 
 If you have any questions or feedback, please feel free to contact [parvvaresh@gmail.com].
 
----
 
-Feel free to replace `[Your Name]` and `[Your Email Address]` with your information. Also, you might want to include a LICENSE.md file if you want to specify the terms of use for your code.
