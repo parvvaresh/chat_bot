@@ -56,7 +56,7 @@ License:
 This project is released under the MIT License. You are free to modify, distribute, and use the code for both commercial and non-commercial purposes. However, it is required to attribute the original authors and provide a link to the project repository.
 
 Contact Information:
-For any inquiries, suggestions, or issues regarding this project, please contact us at your-email@example.com. We appreciate your feedback and contributions to the project.
+For any inquiries, suggestions, or issues regarding this project, please contact us at  parvvaresh@gmail.com. We appreciate your feedback and contributions to the project.
 
 
 ## ITRC
