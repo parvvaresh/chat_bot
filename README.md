@@ -1,5 +1,6 @@
 # Iranian news dataset
 
+![image](https://github.com/parvvaresh/Iranian-news-dataset/assets/89921883/6d802611-e434-4919-bf99-02e31525b8c8)
 
 ## Description:
 This project focuses on data extraction of Persian news articles from the Fars News website. The extracted data can be utilized for various purposes, particularly in the field of artificial intelligence research at the Telecommunications Research Center.
@@ -61,6 +62,9 @@ For any inquiries, suggestions, or issues regarding this project, please contact
 
 ## ITRC
 The Telecommunications Research Center of Iran (TRCI) is a prominent institution dedicated to telecommunications research and innovation. Located in Iran, TRCI plays a pivotal role in advancing the telecommunications sector within the country and contributing to the global telecommunications landscape.
+
+![image](https://github.com/parvvaresh/Iranian-news-dataset/assets/89921883/8078bdd1-74b0-4c1c-a397-4f36e30e67cc)
+
 
 TRCI focuses on a wide array of research areas, including but not limited to telecommunications network development, satellite communications, mobile technologies, and cybersecurity. It collaborates with both domestic and international partners to stay at the forefront of technology and ensure that Iran's telecommunications infrastructure is robust and competitive.
 
