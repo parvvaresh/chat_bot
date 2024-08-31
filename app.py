@@ -10,6 +10,7 @@ app.secret_key = 'your_secret_key'
 
 DATABASE = 'users.db'
 BRAIN_FILE = './model/brain.dump'
+port = 5009
 
 # Initialize AIML kernel
 k = aiml.Kernel()
@@ -171,7 +172,33 @@ def chat():
 
 def get_chatbot_response(user_input):
     """Get response from AIML chatbot."""
-    return k.respond(user_input)
+    respond = k.respond(user_input)
+    respond = fix_respond(user_input, respond)
+    print(type(user_input))
+    return respond
+
+
+def fix_respond(user_input : str, respond : str) -> str:
+    if "login" in user_input.lower():
+        message = f"for login go to this link => http://127.0.0.1:{port}/login"
+        respond += ("\n" + message)
+
+    if "register" in user_input.lower():
+        message = f"for login go to this link => http://127.0.0.1:{port}/register"
+        respond += ("\n" + message)
+    
+    if len(respond) == 0:
+        respond = "Please only ask banking questions and avoid asking miscellaneous questions"
+    
+    return respond
+
+
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5008)
+    app.run(debug=True, port=port)
+
+
+
+
+
+        
