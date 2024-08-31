@@ -1,108 +1,820 @@
 <aiml version="1.0">
 
-    <!-- Basic Greetings -->
-    <category>
-        <pattern>HELLO</pattern>
-        <template>Hello! How can I assist you with your banking needs today?</template>
-    </category>
-    
-    <category>
-        <pattern>HI</pattern>
-        <template>Hi there! How can I help you today?</template>
-    </category>
+<category><pattern>HELLO</pattern>
+<template>Hello! How can I assist you with your banking needs today?</template>
+</category>
 
-    <!-- Asking for Account Information -->
-    <category>
-        <pattern>WHAT IS MY ACCOUNT BALANCE</pattern>
-        <template>Could you please provide your account number?</template>
-    </category>
+<category><pattern>HI</pattern>
+<template>Hi there! How can I help you today?</template>
+</category>
 
-    <category>
-        <pattern>*</pattern>
-        <that>Could you please provide your account number?</that>
-        <template>Thank you! Please wait a moment while I retrieve your balance information.</template>
-    </category>
+<category><pattern>WHAT IS MY ACCOUNT BALANCE</pattern>
+<template>Could you please provide your account number?</template>
+</category>
 
-    <!-- Asking for Transfer Details -->
-    <category>
-        <pattern>HOW CAN I TRANSFER MONEY</pattern>
-        <template>I can help with that! Please provide the account number you want to transfer money from.</template>
-    </category>
+<category><pattern>*</pattern>
+<that>Could you please provide your account number?</that>
+<template>Thank you! Please wait a moment while I retrieve your balance information.</template>
+</category>
 
-    <category>
-        <pattern>*</pattern>
-        <that>Please provide the account number you want to transfer money from.</that>
-        <template>Great! Now, can you please provide the account number you want to transfer money to?</template>
-    </category>
+<category><pattern>HOW CAN I TRANSFER MONEY</pattern>
+<template>I can help with that! Please provide the account number you want to transfer money from.</template>
+</category>
 
-    <category>
-        <pattern>*</pattern>
-        <that>can you please provide the account number you want to transfer money to</that>
-        <template>Thank you! Lastly, please enter the amount you would like to transfer.</template>
-    </category>
+<category><pattern>*</pattern>
+<that>Please provide the account number you want to transfer money from.</that>
+<template>Great! Now, can you please provide the account number you want to transfer money to?</template>
+</category>
 
-    <category>
-        <pattern>*</pattern>
-        <that>please enter the amount you would like to transfer</that>
-        <template>Your transfer request of <star/> has been recorded. It will be processed shortly.</template>
-    </category>
+<category><pattern>*</pattern>
+<that>can you please provide the account number you want to transfer money to</that>
+<template>Thank you! Lastly, please enter the amount you would like to transfer.</template>
+</category>
 
-    <!-- Asking for Loan Application Details -->
-    <category>
-        <pattern>HOW CAN I APPLY FOR A LOAN</pattern>
-        <template>I can assist with that. What type of loan are you interested in? (e.g., personal, auto, mortgage)</template>
-    </category>
+<category><pattern>*</pattern>
+<that>please enter the amount you would like to transfer</that>
+<template>Your transfer request of <star/> has been recorded. It will be processed shortly.</template>
+</category>
 
-    <category>
-        <pattern>*</pattern>
-        <that>What type of loan are you interested in</that>
-        <template>Thank you! Please provide the loan amount you wish to apply for.</template>
-    </category>
+<category><pattern>HOW CAN I APPLY FOR A LOAN</pattern>
+<template>I can assist with that. What type of loan are you interested in? (e.g., personal, auto, mortgage)</template>
+</category>
 
-    <category>
-        <pattern>*</pattern>
-        <that>provide the loan amount you wish to apply for</that>
-        <template>Thanks for the information. A representative will contact you soon to complete the loan application process.</template>
-    </category>
+<category><pattern>*</pattern>
+<that>What type of loan are you interested in</that>
+<template>Thank you! Please provide the loan amount you wish to apply for.</template>
+</category>
 
-    <!-- Credit Card Information Collection -->
-    <category>
-        <pattern>HOW CAN I APPLY FOR A CREDIT CARD</pattern>
-        <template>Please provide your full name to start the application process.</template>
-    </category>
+<category><pattern>*</pattern>
+<that>provide the loan amount you wish to apply for</that>
+<template>Thanks for the information. A representative will contact you soon to complete the loan application process.</template>
+</category>
 
-    <category>
-        <pattern>*</pattern>
-        <that>Please provide your full name to start the application process.</that>
-        <template>Thanks, <star/>! Now, please provide your contact number.</template>
-    </category>
+<category><pattern>HOW CAN I APPLY FOR A CREDIT CARD</pattern>
+<template>Please provide your full name to start the application process.</template>
+</category>
 
-    <category>
-        <pattern>*</pattern>
-        <that>Now, please provide your contact number</that>
-        <template>Thank you! Your application is being processed, and you will be contacted shortly.</template>
-    </category>
+<category><pattern>*</pattern>
+<that>Please provide your full name to start the application process.</that>
+<template>Thanks, <star/>! Now, please provide your contact number.</template>
+</category>
 
-    <!-- General Information Requests -->
-    <category>
-        <pattern>WHAT ARE YOUR WORKING HOURS</pattern>
-        <template>Our branches are open from 9 AM to 5 PM from Monday to Friday. Do you need help with anything else?</template>
-    </category>
+<category><pattern>*</pattern>
+<that>Now, please provide your contact number</that>
+<template>Thank you! Your application is being processed, and you will be contacted shortly.</template>
+</category>
 
-    <category>
-        <pattern>WHERE IS THE NEAREST ATM</pattern>
-        <template>You can find the nearest ATM using our mobile app or by visiting our website's ATM locator. Would you like more details?</template>
-    </category>
+<category><pattern>WHAT ARE YOUR WORKING HOURS</pattern>
+<template>Our branches are open from 9 AM to 5 PM from Monday to Friday. Do you need help with anything else?</template>
+</category>
 
-    <!-- Error Handling -->
-    <category>
-        <pattern>I NEED HELP</pattern>
-        <template>I am here to help. Please specify what you need assistance with, such as account balance, transfers, or loans.</template>
-    </category>
+<category><pattern>WHERE IS THE NEAREST ATM</pattern>
+<template>You can find the nearest ATM using our mobile app or by visiting our website's ATM locator. Would you like more details?</template>
+</category>
 
-    <category>
-        <pattern>I DID NOT UNDERSTAND</pattern>
-        <template>I'm sorry, could you please rephrase your question or be more specific?</template>
-    </category>
-  
+<category><pattern>I NEED HELP</pattern>
+<template>I am here to help. Please specify what you need assistance with, such as account balance, transfers, or loans.</template>
+</category>
+
+<category><pattern>I DID NOT UNDERSTAND</pattern>
+<template>I'm sorry, could you please rephrase your question or be more specific?</template>
+</category>
+
+<category><pattern>CAN I CHECK MY LOAN BALANCE</pattern>
+<template>Certainly.</template>
+</category>
+
+<category><pattern>HOW DO I CHECK MY LOAN BALANCE</pattern>
+<template>Certainly.</template>
+</category>
+
+<category><pattern>I WANT TO CHECK MY LOAN BALANCE</pattern>
+<template>Certainly.</template>
+</category>
+
+<category><pattern>HOW TO CHECK LOAN BALANCE</pattern>
+<template>Certainly.</template>
+</category>
+
+<category><pattern>CAN I SCHEDULE A FUTURE PAYMENT</pattern>
+<template>Definitely.</template>
+</category>
+
+<category><pattern>HOW DO I SCHEDULE A FUTURE PAYMENT</pattern>
+<template>Definitely.</template>
+</category>
+
+<category><pattern>I WANT TO SCHEDULE A FUTURE PAYMENT</pattern>
+<template>Definitely.</template>
+</category>
+
+<category><pattern>HOW TO SCHEDULE A PAYMENT</pattern>
+<template>Definitely.</template>
+</category>
+
+<category><pattern>CAN I SET UP AUTOMATIC PAYMENTS</pattern>
+<template>Affirmative.</template>
+</category>
+
+<category><pattern>HOW DO I SET UP AUTOMATIC PAYMENTS</pattern>
+<template>Affirmative.</template>
+</category>
+
+<category><pattern>I WANT TO SET UP AUTOMATIC PAYMENTS</pattern>
+<template>Affirmative.</template>
+</category>
+
+<category><pattern>HOW TO SET UP AUTOMATIC PAYMENTS</pattern>
+<template>Affirmative.</template>
+</category>
+
+<category><pattern>CAN I UPDATE MY CONTACT INFORMATION</pattern>
+<template>Positively.</template>
+</category>
+
+<category><pattern>HOW DO I UPDATE MY CONTACT INFORMATION</pattern>
+<template>Positively.</template>
+</category>
+
+<category><pattern>I WANT TO UPDATE MY CONTACT INFORMATION</pattern>
+<template>Positively.</template>
+</category>
+
+<category><pattern>HOW TO UPDATE CONTACT INFORMATION</pattern>
+<template>Positively.</template>
+</category>
+
+<category><pattern>CAN I APPLY FOR A PERSONAL LOAN</pattern>
+<template>Definitely.</template>
+</category>
+
+<category><pattern>HOW DO I APPLY FOR A PERSONAL LOAN</pattern>
+<template>Definitely.</template>
+</category>
+
+<category><pattern>I WANT TO APPLY FOR A PERSONAL LOAN</pattern>
+<template>Definitely.</template>
+</category>
+
+<category><pattern>HOW TO APPLY FOR A PERSONAL LOAN</pattern>
+<template>Definitely.</template>
+</category>
+
+<category><pattern>CAN I CHECK MY CREDIT SCORE</pattern>
+<template>Certainly.</template>
+</category>
+
+<category><pattern>HOW DO I CHECK MY CREDIT SCORE</pattern>
+<template>Certainly.</template>
+</category>
+
+<category><pattern>I WANT TO CHECK MY CREDIT SCORE</pattern>
+<template>Certainly.</template>
+</category>
+
+<category><pattern>HOW TO CHECK CREDIT SCORE</pattern>
+<template>Certainly.</template>
+</category>
+
+<category><pattern>CAN I REQUEST A DEBIT CARD REPLACEMENT</pattern>
+<template>Definitely.</template>
+</category>
+
+<category><pattern>HOW DO I REQUEST A DEBIT CARD REPLACEMENT</pattern>
+<template>Definitely.</template>
+</category>
+
+<category><pattern>I WANT TO REQUEST A DEBIT CARD REPLACEMENT</pattern>
+<template>Definitely.</template>
+</category>
+
+<category><pattern>HOW TO REQUEST A DEBIT CARD REPLACEMENT</pattern>
+<template>Definitely.</template>
+</category>
+
+<category><pattern>CAN I CHANGE MY ACCOUNT TYPE</pattern>
+<template>Affirmative.</template>
+</category>
+
+<category><pattern>HOW DO I CHANGE MY ACCOUNT TYPE</pattern>
+<template>Affirmative.</template>
+</category>
+
+<category><pattern>I WANT TO CHANGE MY ACCOUNT TYPE</pattern>
+<template>Affirmative.</template>
+</category>
+
+<category><pattern>HOW TO CHANGE ACCOUNT TYPE</pattern>
+<template>Affirmative.</template>
+</category>
+
+<category><pattern>CAN I ENROLL IN PAPERLESS STATEMENTS</pattern>
+<template>Positively.</template>
+</category>
+
+<category><pattern>HOW DO I ENROLL IN PAPERLESS STATEMENTS</pattern>
+<template>Positively.</template>
+</category>
+
+<category><pattern>I WANT TO ENROLL IN PAPERLESS STATEMENTS</pattern>
+<template>Positively.</template>
+</category>
+
+<category><pattern>HOW TO ENROLL IN PAPERLESS STATEMENTS</pattern>
+<template>Positively.</template>
+</category>
+
+<category><pattern>CAN I GET A COPY OF MY ACCOUNT STATEMENT</pattern>
+<template>Certainly.</template>
+</category>
+
+<category><pattern>HOW DO I GET A COPY OF MY ACCOUNT STATEMENT</pattern>
+<template>Certainly.</template>
+</category>
+
+<category><pattern>I WANT A COPY OF MY ACCOUNT STATEMENT</pattern>
+<template>Certainly.</template>
+</category>
+
+<category><pattern>HOW TO GET A COPY OF MY ACCOUNT STATEMENT</pattern>
+<template>Certainly.</template>
+</category>
+
+<category><pattern>CAN I OPEN A JOINT ACCOUNT</pattern>
+<template>Definitely.</template>
+</category>
+
+<category><pattern>HOW DO I OPEN A JOINT ACCOUNT</pattern>
+<template>Definitely.</template>
+</category>
+
+<category><pattern>I WANT TO OPEN A JOINT ACCOUNT</pattern>
+<template>Definitely.</template>
+</category>
+
+<category><pattern>HOW TO OPEN A JOINT ACCOUNT</pattern>
+<template>Definitely.</template>
+</category>
+
+<category><pattern>CAN I ADD AN AUTHORIZED USER TO MY ACCOUNT</pattern>
+<template>Affirmative.</template>
+</category>
+
+<category><pattern>HOW DO I ADD AN AUTHORIZED USER TO MY ACCOUNT</pattern>
+<template>Affirmative.</template>
+</category>
+
+<category><pattern>I WANT TO ADD AN AUTHORIZED USER TO MY ACCOUNT</pattern>
+<template>Affirmative.</template>
+</category>
+
+<category><pattern>HOW TO ADD AN AUTHORIZED USER TO MY ACCOUNT</pattern>
+<template>Affirmative.</template>
+</category>
+
+<category><pattern>CAN I REQUEST A LOAN DEFERMENT</pattern>
+<template>Certainly.</template>
+</category>
+
+<category><pattern>HOW DO I REQUEST A LOAN DEFERMENT</pattern>
+<template>Certainly.</template>
+</category>
+
+<category><pattern>I WANT TO REQUEST A LOAN DEFERMENT</pattern>
+<template>Certainly.</template>
+</category>
+
+<category><pattern>HOW TO REQUEST A LOAN DEFERMENT</pattern>
+<template>Certainly.</template>
+</category>
+
+<category><pattern>CAN I APPLY FOR OVERDRAFT PROTECTION</pattern>
+<template>Positively.</template>
+</category>
+
+<category><pattern>HOW DO I APPLY FOR OVERDRAFT PROTECTION</pattern>
+<template>Positively.</template>
+</category>
+
+<category><pattern>I WANT TO APPLY FOR OVERDRAFT PROTECTION</pattern>
+<template>Positively.</template>
+</category>
+
+<category><pattern>HOW TO APPLY FOR OVERDRAFT PROTECTION</pattern>
+<template>Positively.</template>
+</category>
+
+<category><pattern>CAN I CHECK MY ACCOUNT STATUS ONLINE</pattern>
+<template>Definitely.</template>
+</category>
+
+<category><pattern>HOW DO I CHECK MY ACCOUNT STATUS ONLINE</pattern>
+<template>Definitely.</template>
+</category>
+
+<category><pattern>I WANT TO CHECK MY ACCOUNT STATUS ONLINE</pattern>
+<template>Definitely.</template>
+</category>
+
+<category><pattern>HOW TO CHECK ACCOUNT STATUS ONLINE</pattern>
+<template>Definitely.</template>
+</category>
+
+<category><pattern>CAN I REQUEST AN INTEREST RATE REDUCTION</pattern>
+<template>Certainly.</template>
+</category>
+
+<category><pattern>HOW DO I REQUEST AN INTEREST RATE REDUCTION</pattern>
+<template>Certainly.</template>
+</category>
+
+<category><pattern>I WANT TO REQUEST AN INTEREST RATE REDUCTION</pattern>
+<template>Certainly.</template>
+</category>
+
+<category><pattern>HOW TO REQUEST AN INTEREST RATE REDUCTION</pattern>
+<template>Certainly.</template>
+</category>
+
+<category><pattern>CAN I SUSPEND MY ACCOUNT</pattern>
+<template>Definitely.</template>
+</category>
+
+<category><pattern>HOW DO I SUSPEND MY ACCOUNT</pattern>
+<template>Definitely.</template>
+</category>
+
+<category><pattern>I WANT TO SUSPEND MY ACCOUNT</pattern>
+<template>Definitely.</template>
+</category>
+
+<category><pattern>HOW TO SUSPEND ACCOUNT</pattern>
+<template>Definitely.</template>
+</category>
+
+<category><pattern>CAN I CHANGE MY ACCOUNT NUMBER</pattern>
+<template>Affirmative.</template>
+</category>
+
+<category><pattern>HOW DO I CHANGE MY ACCOUNT NUMBER</pattern>
+<template>Affirmative.</template>
+</category>
+
+<category><pattern>I WANT TO CHANGE MY ACCOUNT NUMBER</pattern>
+<template>Affirmative.</template>
+</category>
+
+<category><pattern>HOW TO CHANGE ACCOUNT NUMBER</pattern>
+<template>Affirmative.</template>
+</category>
+
+<category><pattern>CAN I REQUEST A NEW SECURITY TOKEN</pattern>
+<template>Certainly.</template>
+</category>
+
+<category><pattern>HOW DO I REQUEST A NEW SECURITY TOKEN</pattern>
+<template>Certainly.</template>
+</category>
+
+<category><pattern>I WANT TO REQUEST A NEW SECURITY TOKEN</pattern>
+<template>Certainly.</template>
+</category>
+
+<category><pattern>HOW TO REQUEST A NEW SECURITY TOKEN</pattern>
+<template>Certainly.</template>
+</category>
+
+<category><pattern>CAN I CANCEL MY CREDIT CARD</pattern>
+<template>Definitely.</template>
+</category>
+
+<category><pattern>HOW DO I CANCEL MY CREDIT CARD</pattern>
+<template>Definitely.</template>
+</category>
+
+<category><pattern>I WANT TO CANCEL MY CREDIT CARD</pattern>
+<template>Definitely.</template>
+</category>
+
+<category><pattern>HOW TO CANCEL CREDIT CARD</pattern>
+<template>Definitely.</template>
+</category>
+
+<category><pattern>CAN I REQUEST A BALANCE TRANSFER</pattern>
+<template>Affirmative.</template>
+</category>
+
+<category><pattern>HOW DO I REQUEST A BALANCE TRANSFER</pattern>
+<template>Affirmative.</template>
+</category>
+
+<category><pattern>I WANT TO REQUEST A BALANCE TRANSFER</pattern>
+<template>Affirmative.</template>
+</category>
+
+<category><pattern>HOW TO REQUEST A BALANCE TRANSFER</pattern>
+<template>Affirmative.</template>
+</category>
+
+<category><pattern>CAN I UPDATE MY BILLING ADDRESS</pattern>
+<template>Positively.</template>
+</category>
+
+<category><pattern>HOW DO I UPDATE MY BILLING ADDRESS</pattern>
+<template>Positively.</template>
+</category>
+
+<category><pattern>I WANT TO UPDATE MY BILLING ADDRESS</pattern>
+<template>Positively.</template>
+</category>
+
+<category><pattern>HOW TO UPDATE BILLING ADDRESS</pattern>
+<template>Positively.</template>
+</category>
+
+<category><pattern>CAN I RECEIVE FRAUD ALERTS</pattern>
+<template>Certainly.</template>
+</category>
+
+<category><pattern>HOW DO I RECEIVE FRAUD ALERTS</pattern>
+<template>Certainly.</template>
+</category>
+
+<category><pattern>I WANT TO RECEIVE FRAUD ALERTS</pattern>
+<template>Certainly.</template>
+</category>
+
+<category><pattern>HOW TO RECEIVE FRAUD ALERTS</pattern>
+<template>Certainly.</template>
+</category>
+
+<category><pattern>CAN I CHECK IF MY ACCOUNT IS ACTIVE</pattern>
+<template>Definitely.</template>
+</category>
+
+<category><pattern>HOW DO I CHECK IF MY ACCOUNT IS ACTIVE</pattern>
+<template>Definitely.</template>
+</category>
+
+<category><pattern>I WANT TO CHECK IF MY ACCOUNT IS ACTIVE</pattern>
+<template>Definitely.</template>
+</category>
+
+<category><pattern>HOW TO CHECK IF ACCOUNT IS ACTIVE</pattern>
+<template>Definitely.</template>
+</category>
+
+<category><pattern>CAN I APPLY FOR A STUDENT LOAN</pattern>
+<template>Affirmative.</template>
+</category>
+
+<category><pattern>HOW DO I APPLY FOR A STUDENT LOAN</pattern>
+<template>Affirmative.</template>
+</category>
+
+<category><pattern>I WANT TO APPLY FOR A STUDENT LOAN</pattern>
+<template>Affirmative.</template>
+</category>
+
+<category><pattern>HOW TO APPLY FOR A STUDENT LOAN</pattern>
+<template>Affirmative.</template>
+</category>
+
+<category><pattern>CAN I GET A LOAN FOR MY BUSINESS</pattern>
+<template>Certainly.</template>
+</category>
+
+<category><pattern>HOW DO I GET A LOAN FOR MY BUSINESS</pattern>
+<template>Certainly.</template>
+</category>
+
+<category><pattern>I WANT TO GET A LOAN FOR MY BUSINESS</pattern>
+<template>Certainly.</template>
+</category>
+
+<category><pattern>HOW TO GET A LOAN FOR MY BUSINESS</pattern>
+<template>Certainly.</template>
+</category>
+
+<category><pattern>CAN I GET A TAX STATEMENT</pattern>
+<template>Definitely.</template>
+</category>
+
+<category><pattern>HOW DO I GET A TAX STATEMENT</pattern>
+<template>Definitely.</template>
+</category>
+
+<category><pattern>I WANT TO GET A TAX STATEMENT</pattern>
+<template>Definitely.</template>
+</category>
+
+<category><pattern>HOW TO GET A TAX STATEMENT</pattern>
+<template>Definitely.</template>
+</category>
+
+<category><pattern>CAN I REDEEM MY CREDIT CARD POINTS</pattern>
+<template>Positively.</template>
+</category>
+
+<category><pattern>HOW DO I REDEEM MY CREDIT CARD POINTS</pattern>
+<template>Positively.</template>
+</category>
+
+<category><pattern>I WANT TO REDEEM MY CREDIT CARD POINTS</pattern>
+<template>Positively.</template>
+</category>
+
+<category><pattern>HOW TO REDEEM CREDIT CARD POINTS</pattern>
+<template>Positively.</template>
+</category>
+
+<category><pattern>CAN I REPORT UNAUTHORIZED TRANSACTIONS</pattern>
+<template>Certainly.</template>
+</category>
+
+<category><pattern>HOW DO I REPORT UNAUTHORIZED TRANSACTIONS</pattern>
+<template>Certainly.</template>
+</category>
+
+<category><pattern>I WANT TO REPORT UNAUTHORIZED TRANSACTIONS</pattern>
+<template>Certainly.</template>
+</category>
+
+<category><pattern>HOW TO REPORT UNAUTHORIZED TRANSACTIONS</pattern>
+<template>Certainly.</template>
+</category>
+
+<category><pattern>CAN I CANCEL MY CHECKBOOK ORDER</pattern>
+<template>Definitely.</template>
+</category>
+
+<category><pattern>HOW DO I CANCEL MY CHECKBOOK ORDER</pattern>
+<template>Definitely.</template>
+</category>
+
+<category><pattern>I WANT TO CANCEL MY CHECKBOOK ORDER</pattern>
+<template>Definitely.</template>
+</category>
+
+<category><pattern>HOW TO CANCEL CHECKBOOK ORDER</pattern>
+<template>Definitely.</template>
+</category>
+
+<category><pattern>CAN I OPEN A FIXED DEPOSIT ACCOUNT</pattern>
+<template>Affirmative.</template>
+</category>
+
+<category><pattern>HOW DO I OPEN A FIXED DEPOSIT ACCOUNT</pattern>
+<template>Affirmative.</template>
+</category>
+
+<category><pattern>I WANT TO OPEN A FIXED DEPOSIT ACCOUNT</pattern>
+<template>Affirmative.</template>
+</category>
+
+<category><pattern>HOW TO OPEN FIXED DEPOSIT ACCOUNT</pattern>
+<template>Affirmative.</template>
+</category>
+
+<category><pattern>CAN I APPLY FOR A HOME LOAN</pattern>
+<template>Certainly.</template>
+</category>
+
+<category><pattern>HOW DO I APPLY FOR A HOME LOAN</pattern>
+<template>Certainly.</template>
+</category>
+
+<category><pattern>I WANT TO APPLY FOR A HOME LOAN</pattern>
+<template>Certainly.</template>
+</category>
+
+<category><pattern>HOW TO APPLY FOR A HOME LOAN</pattern>
+<template>Certainly.</template>
+</category>
+
+<category><pattern>CAN I RECEIVE ACCOUNT ALERTS VIA SMS</pattern>
+<template>Definitely.</template>
+</category>
+
+<category><pattern>HOW DO I RECEIVE ACCOUNT ALERTS VIA SMS</pattern>
+<template>Definitely.</template>
+</category>
+
+<category><pattern>I WANT TO RECEIVE ACCOUNT ALERTS VIA SMS</pattern>
+<template>Definitely.</template>
+</category>
+
+<category><pattern>HOW TO RECEIVE ACCOUNT ALERTS VIA SMS</pattern>
+<template>Definitely.</template>
+</category>
+
+<category><pattern>CAN I RESET MY ONLINE BANKING PASSWORD</pattern>
+<template>Positively.</template>
+</category>
+
+<category><pattern>HOW DO I RESET MY ONLINE BANKING PASSWORD</pattern>
+<template>Positively.</template>
+</category>
+
+<category><pattern>I WANT TO RESET MY ONLINE BANKING PASSWORD</pattern>
+<template>Positively.</template>
+</category>
+
+<category><pattern>HOW TO RESET ONLINE BANKING PASSWORD</pattern>
+<template>Positively.</template>
+</category>
+
+<category><pattern>CAN I REGISTER FOR E-STATEMENTS</pattern>
+<template>Certainly.</template>
+</category>
+
+<category><pattern>HOW DO I REGISTER FOR E-STATEMENTS</pattern>
+<template>Certainly.</template>
+</category>
+
+<category><pattern>I WANT TO REGISTER FOR E-STATEMENTS</pattern>
+<template>Certainly.</template>
+</category>
+
+<category><pattern>HOW TO REGISTER FOR E-STATEMENTS</pattern>
+<template>Certainly.</template>
+</category>
+
+<category><pattern>CAN I VIEW MY PENDING TRANSACTIONS</pattern>
+<template>Definitely.</template>
+</category>
+
+<category><pattern>HOW DO I VIEW MY PENDING TRANSACTIONS</pattern>
+<template>Definitely.</template>
+</category>
+
+<category><pattern>I WANT TO VIEW MY PENDING TRANSACTIONS</pattern>
+<template>Definitely.</template>
+</category>
+
+<category><pattern>HOW TO VIEW PENDING TRANSACTIONS</pattern>
+<template>Definitely.</template>
+</category>
+
+<category><pattern>CAN I REQUEST A TAX DOCUMENT</pattern>
+<template>Affirmative.</template>
+</category>
+
+<category><pattern>HOW DO I REQUEST A TAX DOCUMENT</pattern>
+<template>Affirmative.</template>
+</category>
+
+<category><pattern>I WANT TO REQUEST A TAX DOCUMENT</pattern>
+<template>Affirmative.</template>
+</category>
+
+<category><pattern>HOW TO REQUEST A TAX DOCUMENT</pattern>
+<template>Affirmative.</template>
+</category>
+
+<category><pattern>CAN I APPLY FOR A REFINANCE LOAN</pattern>
+<template>Certainly.</template>
+</category>
+
+<category><pattern>HOW DO I APPLY FOR A REFINANCE LOAN</pattern>
+<template>Certainly.</template>
+</category>
+
+<category><pattern>I WANT TO APPLY FOR A REFINANCE LOAN</pattern>
+<template>Certainly.</template>
+</category>
+
+<category><pattern>HOW TO APPLY FOR A REFINANCE LOAN</pattern>
+<template>Certainly.</template>
+</category>
+
+<category><pattern>CAN I USE MY CARD FOR ONLINE PURCHASES</pattern>
+<template>Definitely.</template>
+</category>
+
+<category><pattern>HOW DO I USE MY CARD FOR ONLINE PURCHASES</pattern>
+<template>Definitely.</template>
+</category>
+
+<category><pattern>I WANT TO USE MY CARD FOR ONLINE PURCHASES</pattern>
+<template>Definitely.</template>
+</category>
+
+<category><pattern>HOW TO USE CARD FOR ONLINE PURCHASES</pattern>
+<template>Definitely.</template>
+</category>
+
+<category><pattern>CAN I RECEIVE A BANK STATEMENT BY MAIL</pattern>
+<template>Positively.</template>
+</category>
+
+<category><pattern>HOW DO I RECEIVE A BANK STATEMENT BY MAIL</pattern>
+<template>Positively.</template>
+</category>
+
+<category><pattern>I WANT TO RECEIVE A BANK STATEMENT BY MAIL</pattern>
+<template>Positively.</template>
+</category>
+
+<category><pattern>HOW TO RECEIVE BANK STATEMENT BY MAIL</pattern>
+<template>Positively.</template>
+</category>
+
+<category><pattern>CAN I ACTIVATE MY ONLINE BANKING ACCOUNT</pattern>
+<template>Certainly.</template>
+</category>
+
+<category><pattern>HOW DO I ACTIVATE MY ONLINE BANKING ACCOUNT</pattern>
+<template>Certainly.</template>
+</category>
+
+<category><pattern>I WANT TO ACTIVATE MY ONLINE BANKING ACCOUNT</pattern>
+<template>Certainly.</template>
+</category>
+
+<category><pattern>HOW TO ACTIVATE ONLINE BANKING ACCOUNT</pattern>
+<template>Certainly.</template>
+</category>
+
+<category><pattern>CAN I TRANSFER FUNDS BETWEEN ACCOUNTS</pattern>
+<template>Definitely.</template>
+</category>
+
+<category><pattern>HOW DO I TRANSFER FUNDS BETWEEN ACCOUNTS</pattern>
+<template>Definitely.</template>
+</category>
+
+<category><pattern>I WANT TO TRANSFER FUNDS BETWEEN ACCOUNTS</pattern>
+<template>Definitely.</template>
+</category>
+
+<category><pattern>HOW TO TRANSFER FUNDS BETWEEN ACCOUNTS</pattern>
+<template>Definitely.</template>
+</category>
+
+<category><pattern>CAN I PAY OFF MY LOAN EARLY</pattern>
+<template>Affirmative.</template>
+</category>
+
+<category><pattern>HOW DO I PAY OFF MY LOAN EARLY</pattern>
+<template>Affirmative.</template>
+</category>
+
+<category><pattern>I WANT TO PAY OFF MY LOAN EARLY</pattern>
+<template>Affirmative.</template>
+</category>
+
+<category><pattern>HOW TO PAY OFF LOAN EARLY</pattern>
+<template>Affirmative.</template>
+</category>
+
+<category><pattern>CAN I ENROLL IN A SAVINGS PLAN</pattern>
+<template>Certainly.</template>
+</category>
+
+<category><pattern>HOW DO I ENROLL IN A SAVINGS PLAN</pattern>
+<template>Certainly.</template>
+</category>
+
+<category><pattern>I WANT TO ENROLL IN A SAVINGS PLAN</pattern>
+<template>Certainly.</template>
+</category>
+
+<category><pattern>HOW TO ENROLL IN A SAVINGS PLAN</pattern>
+<template>Certainly.</template>
+</category>
+
+<category><pattern>CAN I APPLY FOR A CERTIFICATE OF DEPOSIT</pattern>
+<template>Definitely.</template>
+</category>
+
+<category><pattern>HOW DO I APPLY FOR A CERTIFICATE OF DEPOSIT</pattern>
+<template>Definitely.</template>
+</category>
+
+<category><pattern>I WANT TO APPLY FOR A CERTIFICATE OF DEPOSIT</pattern>
+<template>Definitely.</template>
+</category>
+
+<category><pattern>HOW TO APPLY FOR CERTIFICATE OF DEPOSIT</pattern>
+<template>Definitely.</template>
+</category>
+
+ 
+<category><pattern>CAN I GET A LOAN</pattern>
+<template>for sure.</template>
+</category>
+
+<category><pattern>I NEED A LOAN</pattern>
+<template>for sure.</template>
+</category>
+
+<category><pattern>I NEED TO GET A LOAN</pattern>
+<template>for sure.</template>
+</category>
+
+<category><pattern>I NEED LOAN</pattern>
+<template>for sure.</template>
+</category>
+
 </aiml>
