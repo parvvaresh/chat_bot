@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Welcome, {{ user.name }}</h2>
+        <p><strong>National ID:</strong> {{ user.national_id }}</p>
+        <p><strong>Mobile:</strong> {{ user.mobile }}</p>
+        <p><strong>Gender:</strong> {{ user.gender }}</p>
+        <p><strong>Email:</strong> {{ user.email }}</p>
+        <p><strong>Account Type:</strong> {{ user.account_type }}</p>
+        <!-- Add more user details as needed -->
+    </div>
+</body>
+</html>

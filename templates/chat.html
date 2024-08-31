@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #chat-container {
+            width: 350px;
+            max-width: 90%;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        #chatbox {
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            border: 1px solid #ddd;
+            padding: 15px;
+            flex: 1;
+            overflow-y: auto;
+            background-color: #fafafa;
+            height: 400px;
+        }
+
+        #messages {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .message {
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 8px;
+            max-width: 80%;
+        }
+
+        .message.user {
+            align-self: flex-end;
+            background-color: #e0f7fa;
+        }
+
+        .message.bot {
+            align-self: flex-start;
+            background-color: #e8eaf6;
+        }
+
+        #chat-form {
+            display: flex;
+            border-top: 1px solid #ddd;
+        }
+
+        #message {
+            flex: 1;
+            border: none;
+            padding: 10px;
+            border-bottom-left-radius: 8px;
+            font-size: 14px;
+            outline: none;
+        }
+
+        #send {
+            background-color: #3498db;
+            color: #ffffff;
+            border: none;
+            padding: 10px;
+            border-bottom-right-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s ease;
+        }
+
+        #send:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div id="chat-container">
+        <h2 style="text-align: center; padding: 15px; margin: 0; background-color: #3498db; color: #ffffff; border-top-left-radius: 8px; border-top-right-radius: 8px;">Chatbot</h2>
+        <div id="chatbox">
+            <div id="messages"></div>
+        </div>
+        <form id="chat-form">
+            <input type="text" id="message" placeholder="Type your message..." required>
+            <button type="submit" id="send">Send</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('chat-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            var message = document.getElementById('message').value;
+            var chatbox = document.getElementById('chatbox');
+            var messagesDiv = document.getElementById('messages');
+            
+            // Display user's message
+            var userMessageDiv = document.createElement('div');
+            userMessageDiv.className = 'message user';
+            userMessageDiv.innerHTML = '<b>You:</b> ' + message;
+            messagesDiv.appendChild(userMessageDiv);
+
+            // Scroll to the bottom of the chatbox
+            chatbox.scrollTop = chatbox.scrollHeight;
+
+            // Send message to server
+            fetch('/chat', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: 'message=' + encodeURIComponent(message)
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Display chatbot's response
+                var botMessageDiv = document.createElement('div');
+                botMessageDiv.className = 'message bot';
+                botMessageDiv.innerHTML = '<b>Bot:</b> ' + data.response;
+                messagesDiv.appendChild(botMessageDiv);
+
+                // Scroll to the bottom of the chatbox
+                chatbox.scrollTop = chatbox.scrollHeight;
+            });
+
+            document.getElementById('message').value = '';
+        });
+    </script>
+</body>
+</html>

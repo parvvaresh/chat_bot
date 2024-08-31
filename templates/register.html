@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="split-screen">
+        <!-- Form Section -->
+        <div class="form-container">
+            <h2>Register</h2>
+            <form action="/register" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="mobile">Mobile number:</label>
+                <input type="text" id="mobile" name="mobile" required>
+
+                <label for="national_id">National ID:</label>
+                <input type="text" id="national_id" name="national_id" required>
+
+                <label for="gender">Gender:</label>
+                <input type="text" id="gender" name="gender" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label>Type of account:</label>
+                <div class="radio-group">
+                    <label>
+                        <input type="radio" name="account_type" value="CC" required> CC a/c
+                    </label>
+                    <label>
+                        <input type="radio" name="account_type" value="DC" required> DC a/c
+                    </label>
+                    <label>
+                        <input type="radio" name="account_type" value="LC" required> LC a/c
+                    </label>
+                </div>
+
+                <input type="submit" value="Submit">
+            </form>
+            <a href="{{ url_for('chat') }}" class="btn-chat">Talk to Chatbot</a>
+        </div>
+        
+        <!-- Chatbot Section -->
+        <div class="chat-container">
+            <iframe src="{{ url_for('chat') }}" frameborder="0" width="100%" height="100%"></iframe>
+        </div>
+    </div>
+</body>
+</html>

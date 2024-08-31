@@ -1,0 +1,108 @@
+<aiml version="1.0">
+
+    <!-- Basic Greetings -->
+    <category>
+        <pattern>HELLO</pattern>
+        <template>Hello! How can I assist you with your banking needs today?</template>
+    </category>
+    
+    <category>
+        <pattern>HI</pattern>
+        <template>Hi there! How can I help you today?</template>
+    </category>
+
+    <!-- Asking for Account Information -->
+    <category>
+        <pattern>WHAT IS MY ACCOUNT BALANCE</pattern>
+        <template>Could you please provide your account number?</template>
+    </category>
+
+    <category>
+        <pattern>*</pattern>
+        <that>Could you please provide your account number?</that>
+        <template>Thank you! Please wait a moment while I retrieve your balance information.</template>
+    </category>
+
+    <!-- Asking for Transfer Details -->
+    <category>
+        <pattern>HOW CAN I TRANSFER MONEY</pattern>
+        <template>I can help with that! Please provide the account number you want to transfer money from.</template>
+    </category>
+
+    <category>
+        <pattern>*</pattern>
+        <that>Please provide the account number you want to transfer money from.</that>
+        <template>Great! Now, can you please provide the account number you want to transfer money to?</template>
+    </category>
+
+    <category>
+        <pattern>*</pattern>
+        <that>can you please provide the account number you want to transfer money to</that>
+        <template>Thank you! Lastly, please enter the amount you would like to transfer.</template>
+    </category>
+
+    <category>
+        <pattern>*</pattern>
+        <that>please enter the amount you would like to transfer</that>
+        <template>Your transfer request of <star/> has been recorded. It will be processed shortly.</template>
+    </category>
+
+    <!-- Asking for Loan Application Details -->
+    <category>
+        <pattern>HOW CAN I APPLY FOR A LOAN</pattern>
+        <template>I can assist with that. What type of loan are you interested in? (e.g., personal, auto, mortgage)</template>
+    </category>
+
+    <category>
+        <pattern>*</pattern>
+        <that>What type of loan are you interested in</that>
+        <template>Thank you! Please provide the loan amount you wish to apply for.</template>
+    </category>
+
+    <category>
+        <pattern>*</pattern>
+        <that>provide the loan amount you wish to apply for</that>
+        <template>Thanks for the information. A representative will contact you soon to complete the loan application process.</template>
+    </category>
+
+    <!-- Credit Card Information Collection -->
+    <category>
+        <pattern>HOW CAN I APPLY FOR A CREDIT CARD</pattern>
+        <template>Please provide your full name to start the application process.</template>
+    </category>
+
+    <category>
+        <pattern>*</pattern>
+        <that>Please provide your full name to start the application process.</that>
+        <template>Thanks, <star/>! Now, please provide your contact number.</template>
+    </category>
+
+    <category>
+        <pattern>*</pattern>
+        <that>Now, please provide your contact number</that>
+        <template>Thank you! Your application is being processed, and you will be contacted shortly.</template>
+    </category>
+
+    <!-- General Information Requests -->
+    <category>
+        <pattern>WHAT ARE YOUR WORKING HOURS</pattern>
+        <template>Our branches are open from 9 AM to 5 PM from Monday to Friday. Do you need help with anything else?</template>
+    </category>
+
+    <category>
+        <pattern>WHERE IS THE NEAREST ATM</pattern>
+        <template>You can find the nearest ATM using our mobile app or by visiting our website's ATM locator. Would you like more details?</template>
+    </category>
+
+    <!-- Error Handling -->
+    <category>
+        <pattern>I NEED HELP</pattern>
+        <template>I am here to help. Please specify what you need assistance with, such as account balance, transfers, or loans.</template>
+    </category>
+
+    <category>
+        <pattern>I DID NOT UNDERSTAND</pattern>
+        <template>I'm sorry, could you please rephrase your question or be more specific?</template>
+    </category>
+  
+</aiml>

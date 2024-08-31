@@ -1,0 +1,243 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    max-width: 600px;
+    margin: auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    color: #2c3e50;
+    margin: 0;
+    font-size: 36px;
+}
+
+main {
+    text-align: center;
+}
+
+main p {
+    font-size: 18px;
+    margin: 0 0 20px;
+    color: #555;
+}
+
+.options {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.options li {
+    margin: 10px 0;
+}
+
+.options .btn {
+    display: inline-block;
+    padding: 15px 25px;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #3498db;
+    border-radius: 4px;
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.options .btn:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+/* Forms and Buttons */
+.form-container {
+    width: 100%;
+    max-width: 600px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    box-sizing: border-box;
+    margin: 10px 0;
+}
+
+.form-container h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin: 0;
+    font-size: 24px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.form-container label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #555;
+}
+
+.form-container input[type="text"],
+.form-container input[type="password"],
+.form-container input[type="email"],
+.form-container input[type="tel"],
+.form-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form-container input[type="submit"] {
+    background-color: #3498db;
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.form-container input[type="submit"]:hover {
+    background-color: #2980b9;
+}
+
+.radio-group label {
+    display: block;
+    margin: 5px 0;
+}
+
+.btn-chat {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #3498db;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-chat:hover {
+    background-color: #2980b9;
+}
+
+/* Split Screen Layout */
+.split-screen {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.form-container {
+    flex: 1;
+    padding: 20px;
+    background-color: #ffffff;
+    border-right: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+}
+
+.chat-container {
+    flex: 1;
+    background-color: #f7f7f7;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Chatbot Styles */
+#chat-container {
+    width: 100%;
+    max-width: 350px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+#chatbox {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border: 1px solid #ddd;
+    padding: 15px;
+    flex: 1;
+    overflow-y: auto;
+    background-color: #fafafa;
+    height: 400px;
+}
+
+#messages {
+    display: flex;
+    flex-direction: column;
+}
+
+.message {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    max-width: 80%;
+}
+
+.message.user {
+    align-self: flex-end;
+    background-color: #e0f7fa;
+}
+
+.message.bot {
+    align-self: flex-start;
+    background-color: #e8eaf6;
+}
+
+#chat-form {
+    display: flex;
+    border-top: 1px solid #ddd;
+}
+
+#message {
+    flex: 1;
+    border: none;
+    padding: 10px;
+    border-bottom-left-radius: 8px;
+    font-size: 14px;
+    outline: none;
+}
+
+#send {
+    background-color: #3498db;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    border-bottom-right-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+#send:hover {
+    background-color: #2980b9;
+}
