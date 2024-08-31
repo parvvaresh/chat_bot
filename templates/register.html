@@ -10,6 +10,18 @@
         <!-- Form Section -->
         <div class="form-container">
             <h2>Register</h2>
+
+            <!-- Flash message section -->
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    <div class="flash-messages">
+                        {% for message in messages %}
+                            <p>{{ message }}</p>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            {% endwith %}
+
             <form action="/register" method="post">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
