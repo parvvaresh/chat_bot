@@ -82,7 +82,6 @@ def register():
 
         if existing_user:
             flash('User with this National ID is already registered. Please log in.')
-            time.sleep(60)
             return redirect(url_for('login'))
 
 
